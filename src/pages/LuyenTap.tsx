@@ -6,7 +6,7 @@ import {
   Check, X, BookOpen, Lightbulb, Repeat, Award, Filter, ArrowUp, ArrowDown
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import MathFormula, { renderTextWithMath } from "../components/MathFormula";
+import { renderTextWithMath } from "../components/MathFormula";
 
 interface LuyenTapProps {
   onAwardXP: (xp: number, coins: number) => void;
