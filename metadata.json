@@ -1,0 +1,6 @@
+{
+  "name": "Toán 8 AI",
+  "description": "Ứng dụng học tập thông minh, trực quan và sinh động về Đa thức dành cho học sinh lớp 8",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
