@@ -580,7 +580,7 @@ function BeeGame({ exitToMenu, triggerSound, onAwardXP, questionPool }: BeeProps
                   onClick={() => handleSelect(oIdx)}
                   className={`w-full text-left p-4 rounded-xl border-2 font-bold transition-all text-sm sm:text-base flex items-center justify-between ${style}`}
                 >
-                  <MathFormula formula={opt} />
+                  {renderTextWithMath(opt)}
                   {hasSub && isCorrectOpt && <Check size={18} className="text-emerald-600" />}
                   {hasSub && isSelected && !isCorrectOpt && <X size={18} className="text-rose-600" />}
                 </button>
@@ -780,7 +780,7 @@ function MemoryGame({ exitToMenu, triggerSound, onAwardXP }: MemoryProps) {
                 }`}
               >
                 {showFace ? (
-                  <MathFormula formula={card.content} />
+                  {renderTextWithMath(card.content)}
                 ) : (
                   "❔"
                 )}
@@ -1040,7 +1040,7 @@ function MillionaireGame({ exitToMenu, triggerSound, onAwardXP, questionPool }: 
                   <span className="text-slate-400 font-extrabold mr-1">
                     {idx === 0 ? "A:" : idx === 1 ? "B:" : idx === 2 ? "C:" : "D:"}
                   </span>
-                  <MathFormula formula={opt} />
+                  {renderTextWithMath(opt)}
                 </button>
               );
             })}
@@ -1259,7 +1259,7 @@ function ClimbingGame({ exitToMenu, triggerSound, onAwardXP, questionPool }: Cli
                   onClick={() => handleSelect(idx)}
                   className={`w-full text-left p-4 rounded-xl border-2 font-black transition-all text-sm flex items-center justify-between ${style}`}
                 >
-                  <MathFormula formula={opt} />
+                  {renderTextWithMath(opt)}
                   {hasSub && isCorrectIdx && <Check size={18} className="text-emerald-600" />}
                   {hasSub && isSelected && !isCorrectIdx && <X size={18} className="text-rose-600" />}
                 </button>
