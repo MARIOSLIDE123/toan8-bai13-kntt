@@ -486,7 +486,7 @@ export default function LuyenTap({ onAwardXP }: LuyenTapProps) {
                         className={`w-full text-left p-5 rounded-2xl border-2 shadow-xs font-bold transition-all flex items-center justify-between ${cardBorder} ${cardBg}`}
                       >
                         <span className={`text-base ${textStyle}`}>
-                          <MathFormula formula={opt} />
+                          {renderTextWithMath(opt)}
                         </span>
                         
                         <div className="shrink-0 ml-3">
@@ -598,7 +598,7 @@ export default function LuyenTap({ onAwardXP }: LuyenTapProps) {
                           onClick={() => toggleMultiSelectOption(idx)}
                           className={`w-full p-4 rounded-xl border-2 text-left flex items-center justify-between font-bold transition-all ${cardStyle}`}
                         >
-                          <span><MathFormula formula={opt} /></span>
+                          <span>{renderTextWithMath(opt)}</span>
                           <div className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all ${
                             isSelected ? "bg-indigo-600 border-indigo-600 text-white" : "border-slate-300"
                           }`}>
@@ -642,7 +642,7 @@ export default function LuyenTap({ onAwardXP }: LuyenTapProps) {
                               onClick={() => handleMatchingLeftClick(idx)}
                               className={`flex-1 text-left p-4 rounded-xl border-2 font-bold shadow-xs text-sm transition-all ${style}`}
                             >
-                              <MathFormula formula={pair.left} />
+                              {renderTextWithMath(pair.left)}
                             </button>
                             
                             {/* Connection Indicator badge */}
@@ -700,7 +700,7 @@ export default function LuyenTap({ onAwardXP }: LuyenTapProps) {
                           >
                             <span>
                               <span className="text-xs font-black text-slate-400 mr-2">#{idx + 1}</span>
-                              <MathFormula formula={pair.right} />
+                              {renderTextWithMath(pair.right)}
                             </span>
                             {isMatched && (
                               <span className="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded font-black border">Đã chọn</span>
@@ -731,7 +731,7 @@ export default function LuyenTap({ onAwardXP }: LuyenTapProps) {
                             <span className="w-6 h-6 bg-slate-200 rounded-full flex items-center justify-center text-xs text-slate-700">
                               {idx + 1}
                             </span>
-                            <span className="text-base font-bold text-slate-800"><MathFormula formula={item} /></span>
+                            <span className="text-base font-bold text-slate-800">{renderTextWithMath(item)}</span>
                           </div>
 
                           {/* Control arrows */}
@@ -803,7 +803,7 @@ export default function LuyenTap({ onAwardXP }: LuyenTapProps) {
                           return (
                             <tr key={rowIdx} className="border-b border-slate-200 text-sm font-bold text-slate-700 hover:bg-slate-50">
                               <td className="p-3 border-r border-slate-200 bg-slate-50 text-slate-800 font-black">
-                                <MathFormula formula={row.label} />
+                                {renderTextWithMath(row.label)}
                               </td>
                               
                               <td className="p-3 border-r border-slate-200">
