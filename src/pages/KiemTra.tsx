@@ -507,7 +507,7 @@ export default function KiemTra({ onAwardXP, onAwardBadge }: KiemTraProps) {
                                 : "border-slate-200 bg-white hover:border-slate-300 text-slate-700"
                             }`}
                           >
-                            <span><MathFormula formula={opt} /></span>
+                            <span>{renderTextWithMath(opt)}</span>
                             <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${isSelected ? "border-rose-500" : "border-slate-300"}`}>
                               {isSelected && <div className="w-2.5 h-2.5 bg-rose-500 rounded-full" />}
                             </div>
@@ -568,7 +568,7 @@ export default function KiemTra({ onAwardXP, onAwardBadge }: KiemTraProps) {
                               isSelected ? "border-rose-500 bg-rose-50/40" : "border-slate-200 bg-white"
                             }`}
                           >
-                            <span><MathFormula formula={opt} /></span>
+                            <span>{renderTextWithMath(opt)}</span>
                             <div className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all ${
                               isSelected ? "bg-rose-500 border-rose-500 text-white" : "border-slate-300"
                             }`}>
@@ -593,7 +593,7 @@ export default function KiemTra({ onAwardXP, onAwardBadge }: KiemTraProps) {
                             return (
                               <div key={idx} className="flex gap-2 items-center">
                                 <div className="flex-1 p-3.5 bg-slate-50 border rounded-xl text-sm font-bold">
-                                  <MathFormula formula={pair.left} />
+                                  {renderTextWithMath(pair.left)}
                                 </div>
                                 <select
                                   value={matchedRightIdx === undefined ? "" : matchedRightIdx}
@@ -621,7 +621,7 @@ export default function KiemTra({ onAwardXP, onAwardBadge }: KiemTraProps) {
                           {questions[currentIdx].matchingPairs.map((pair, idx) => (
                             <div key={idx} className="p-3.5 bg-slate-50 border rounded-xl text-sm font-bold">
                               <span className="text-xs font-black text-slate-400 mr-2">#{idx + 1}</span>
-                              <MathFormula formula={pair.right} />
+                              {renderTextWithMath(pair.right)}
                             </div>
                           ))}
                         </div>
@@ -641,7 +641,7 @@ export default function KiemTra({ onAwardXP, onAwardBadge }: KiemTraProps) {
                           <div key={idx} className="flex items-center justify-between bg-slate-50 border-2 border-slate-200 p-3.5 rounded-2xl">
                             <span className="text-sm font-black text-slate-800 flex items-center gap-2">
                               <span className="w-5 h-5 bg-slate-200 rounded-full flex items-center justify-center text-xs text-slate-600">{idx + 1}</span>
-                              <MathFormula formula={actualItem} />
+                              {renderTextWithMath(actualItem)}
                             </span>
                             <div className="flex gap-1.5">
                               <button
@@ -684,7 +684,7 @@ export default function KiemTra({ onAwardXP, onAwardBadge }: KiemTraProps) {
 
                             return (
                               <tr key={rowIdx} className="border-b">
-                                <td className="p-2.5 font-bold"><MathFormula formula={row.label} /></td>
+                                <td className="p-2.5 font-bold">{renderTextWithMath(row.label)}</td>
                                 <td className="p-2.5">
                                   {isCoeffField ? (
                                     <input
