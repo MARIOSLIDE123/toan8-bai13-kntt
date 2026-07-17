@@ -780,7 +780,7 @@ function MemoryGame({ exitToMenu, triggerSound, onAwardXP }: MemoryProps) {
                 }`}
               >
                 {showFace ? (
-                  {renderTextWithMath(card.content)}
+                  renderTextWithMath(card.content)
                 ) : (
                   "❔"
                 )}
